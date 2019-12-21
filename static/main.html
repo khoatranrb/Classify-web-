@@ -19,9 +19,9 @@
     <script>
         $('#name-button').click(function (event) {
             let message = {
-                name: $('name-input').val()
+                name: $('#name-input').val()
             }
-            $.post('http://10.0.0.4:8000/get_message', JSON.stringify(message), function (response) {
+            $.post('http://127.0.0.1:5000/main', JSON.stringify(message), function (response) {
                 $('#greeting').text(response.greeting);
                 console.log(response);
             });
